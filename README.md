@@ -1,8 +1,8 @@
 ## GitHub script
 
-1.cd
+*cd
 
-2.git init
+*git init
 
 3.git add .
 
