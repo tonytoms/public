@@ -1,5 +1,14 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+<xs:element name="full">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="D" type="sample"/>
+ 
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
 <xs:complexType name="sample">
 	 <xs:sequence>
 	 	<xs:element name="D" type="xs:string"/>
