@@ -1,9 +1,7 @@
 ## GitHub script
 
 1.cd
-
 2.git init
-
 3.git add .
 4.git commit -m "First commit"
 5.git status
