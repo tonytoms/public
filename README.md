@@ -3,6 +3,8 @@
 1.cd
 2.git init
 3.git add .
+dsad
+
 4.git commit -m "First commit"
 5.git status
 6.git remote add origin https://acd_@acd.org/acd_/cads_dev.git
