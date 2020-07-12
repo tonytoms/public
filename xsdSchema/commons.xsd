@@ -1,20 +1,5 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> 
 
-<xs:complexType name="albumsType">
-    <xs:sequence>
-      <xs:element name="album" type="albumExtension" minOccurs="1" maxOccurs="unbounded" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="albumExtension">
-  <xs:complexContent>
-    <xs:extension base="albumType">
-      <xs:sequence>
-        <xs:element name="location" type="xs:string" minOccurs="1" maxOccurs="1" />
-        <xs:element name="cloudSync" type="xs:boolean" minOccurs="1" maxOccurs="1" />
-      </xs:sequence>
-    </xs:extension>
-  </xs:complexContent>
-</xs:complexType>
   <xs:complexType name="albumType">
     <xs:sequence>
       <xs:element name="albumID" type="IDType" minOccurs="1" maxOccurs="1" />
