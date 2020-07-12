@@ -128,7 +128,7 @@
   </xs:simpleType>
   <xs:simpleType name="URLType">
     <xs:restriction base="xs:string">
-      <xs:pattern value="[A-Z]" />
+      <xs:pattern value="(https://|http://|ftp://){1}(www\.)?([a-z0-9\.\/])+" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="memoryUnitType">
