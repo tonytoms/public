@@ -8,8 +8,8 @@
       <xs:element name="dateReleased" type="xs:date" minOccurs="1" maxOccurs="1" />
       <xs:element name="createdOn" type="xs:dateTime" minOccurs="1" maxOccurs="1" />
       <xs:element name="tracks" type="tracksType" minOccurs="1" maxOccurs="1" />
-      <xs:element name="albumPopularity" type="popularityType" minOccurs="1" maxOccurs="1" />
-      <xs:element name="description" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="albumPopularity" type="popularityType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="tracksType">
@@ -27,9 +27,9 @@
       <xs:element name="atrists" type="artistsType" minOccurs="1" maxOccurs="1" />
       <xs:element name="fileDetails" type="fileDetailsType" minOccurs="1" maxOccurs="1" />
       <xs:element name="devices" type="devicestype" minOccurs="1" maxOccurs="1" />
-      <xs:element name="popularity" type="popularityType" minOccurs="1" maxOccurs="1" />
+      <xs:element name="popularity" type="popularityType" minOccurs="0" maxOccurs="1" />
       <xs:element name="copyright" type="copyrightType" minOccurs="1" maxOccurs="1" />
-      <xs:element name="description" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="artistsType">
@@ -61,7 +61,7 @@
       <xs:element name="size" type="memoryUnitType" minOccurs="1" maxOccurs="1" />
       <xs:element name="extension" type="extensionType" minOccurs="1" maxOccurs="1" />
       <xs:element name="trackLength" type="xs:duration" minOccurs="1" maxOccurs="1" />
-      <xs:element name="bitRate" type="xs:positiveInteger" minOccurs="1" maxOccurs="1" />
+      <xs:element name="bitRate" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
     </xs:sequence>
   </xs:complexType>
   <xs:simpleType name="extensionType">
@@ -76,7 +76,7 @@
   </xs:simpleType>
   <xs:complexType name="devicestype">
     <xs:sequence>
-      <xs:element name="device" type="deviceType" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="device" type="deviceType" minOccurs="1" maxOccurs="2" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="deviceType">
@@ -95,9 +95,9 @@
   <xs:complexType name="popularityType">
     <xs:sequence>
       <xs:element name="rating" type="ratingType" minOccurs="1" maxOccurs="1" />
-      <xs:element name="comments" type="commentsType" minOccurs="1" maxOccurs="1" />
-      <xs:element name="playCount" type="xs:positiveInteger" minOccurs="1" maxOccurs="1" />
-      <xs:element name="favourite" type="xs:boolean" minOccurs="1" maxOccurs="1" />
+      <xs:element name="comments" type="commentsType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="playCount" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="favourite" type="xs:boolean" minOccurs="0" maxOccurs="1" />
       <xs:element name="lastPlayedOn" type="xs:dateTime" minOccurs="1" maxOccurs="1" />
     </xs:sequence>
   </xs:complexType>
@@ -123,7 +123,7 @@
   </xs:complexType>
   <xs:simpleType name="IDType">
     <xs:restriction base="xs:string">
-      <xs:pattern value="[a-z]{1}([0-9a-z]){5,11}" />
+      <xs:pattern value="[a-z]{1}([0-9a-z]){3,11}" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="URLType">
