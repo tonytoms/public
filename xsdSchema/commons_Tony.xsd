@@ -83,9 +83,19 @@
     <xs:sequence>
       <xs:element name="deviceKind" type="deviceKindType" minOccurs="1" maxOccurs="1" />
       <xs:element name="deviceName" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="AccountAccess" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="AccountUsername" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="Location" type="xs:string" minOccurs="1" maxOccurs="1" />
       <xs:element name="deviceVendor" type="xs:string" minOccurs="1" maxOccurs="1" />
     </xs:sequence>
   </xs:complexType>
+  <xs:simpleType name="deviceKindType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="onlineWithPublicAccess" />
+      <xs:enumeration value="OnlineWithPrivateAccess" />
+      <xs:enumeration value="OfflineAccount" />
+    </xs:restriction>
+  </xs:simpleType>
   <xs:simpleType name="deviceKindType">
     <xs:restriction base="xs:string">
       <xs:enumeration value="play" />
