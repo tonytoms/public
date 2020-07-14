@@ -5,7 +5,7 @@
       <xs:sequence>
         <xs:element name="albumID" type="IDType" minOccurs="1" maxOccurs="1" />
         <xs:element name="albumTitle" type="xs:string" minOccurs="1" maxOccurs="1" />
-      
+        <xs:element name="dateReleased" type="xs:date" minOccurs="1" maxOccurs="1" />
         <xs:element name="createdOn" type="xs:dateTime" minOccurs="1" maxOccurs="1" />
         <xs:element name="tracks" type="tracksType" minOccurs="1" maxOccurs="1" />
         <xs:element name="albumPopularity" type="popularityType" minOccurs="0" maxOccurs="1" />
