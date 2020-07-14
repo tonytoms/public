@@ -82,7 +82,7 @@
   <xs:complexType name="deviceType">
     <xs:sequence>
       <xs:element name="deviceKind" type="deviceKindType" minOccurs="1" maxOccurs="1" />
-      <xs:element name="deviceName" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="deviceNames" type="xs:string" minOccurs="1" maxOccurs="1" />
       <xs:element name="AccountAccess" type="xs:string" minOccurs="1" maxOccurs="1" />
       <xs:element name="AccountUsername" type="xs:string" minOccurs="1" maxOccurs="1" />
       <xs:element name="Location" type="xs:string" minOccurs="1" maxOccurs="1" />
